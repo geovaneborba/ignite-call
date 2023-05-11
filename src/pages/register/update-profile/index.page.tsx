@@ -36,6 +36,7 @@ export default function UpdateProfile() {
   const session = useSession()
   const router = useRouter()
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async function handleUpdateProfile(data: any) {
     await api.put('/users/profile', {
       bio: data.bio,
@@ -47,6 +48,7 @@ export default function UpdateProfile() {
   return (
     <>
       <NextSeo title="Atualize seu perfil | Ignite Call" noindex />
+
       <Container>
         <Header>
           <Heading as="strong">Bem vindo ao Ignite Call!</Heading>
